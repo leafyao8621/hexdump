@@ -3,8 +3,8 @@ SRC = $(wildcard src/*.s)
 OBJ = $(SRC:.s=.o)
 BIN = hexdump
 
-%.o: %.c
-	$(ASM) -g -c $< -o $@
+%.o: %.s
+	$(ASM) -O3 -c $< -o $@
 
 $(BIN): $(OBJ)
 	$(ASM) -no-pie $(OBJ) -o $(BIN)
