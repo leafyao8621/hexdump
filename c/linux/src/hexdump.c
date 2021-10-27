@@ -28,4 +28,5 @@ int main(void) {
         *buf = 10;
         write(1, buf, 1);
     }
+    return 0;
 }
